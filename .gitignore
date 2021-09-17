@@ -5,3 +5,5 @@ lib64/python3.8/site-packages
 share/
 __pycache__/
 .pyc
+venv/
+.env
