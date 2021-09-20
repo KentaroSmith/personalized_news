@@ -15,12 +15,37 @@
                 </div>
             </nav>
             <div class="container-fluid">
+            <div class="row">
                 {% if steam_news %}
             <div class="card col-md-6">
                 <div class="card-header">Steam News</div>
-                <div class="card-body">{{ steam_news }}</div>
+                <div class="card-body">
+                    <div class="card-text">
+                        {% for article in steam_news %}
+                        <h5><a href="{{ article.url }}">{{ article.title }}</h5></a>
+                        <br>
+                        <p>{{ article.contents }}</p>
+                        {% endfor %}
+                    </div>
+                </div>
             </div>
                 {% endif %}
+                <!--Tech news-->
+            {% if tech_news %}
+            <div class="card col-md-6">
+                <div class="card-header">Tech News</div>
+                <div class="card-body">
+                    <div class="card-text">
+                        {% for article in tech_news %}
+                        <h5><a href="{{ article.url }}">{{ article.title }}</h5></a>
+                        <br>
+                        <p>{{ article.description }}</p>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+                {% endif %}
+            </div> <!--End Row-->
         </div>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
     </body>
