@@ -33,8 +33,9 @@
                 <!--Tech news-->
             {% if tech_news %}
             <div class="card col-md-6">
+                
                 <div class="card-header">Tech News</div>
-                <div class="card-body">
+                <div class="card-body"></div>
                     <div class="card-text">
                         {% for article in tech_news %}
                         <h5><a href="{{ article.url }}">{{ article.title }}</h5></a>
